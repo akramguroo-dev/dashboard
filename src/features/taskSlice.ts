@@ -56,7 +56,7 @@ const taskSlice = createSlice({
 
     // Clear all completed tasks
     clearCompleted: (state) => {
-      state.tasks = state.tasts.filter(t => !t.completed);
+      state.tasks = state.tasks.filter(t => !t.completed);
     },
   },
 });
