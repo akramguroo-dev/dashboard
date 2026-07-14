@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 // TypeScript Interface for a Task
 export interface Task {
@@ -11,24 +11,24 @@ export interface Task {
 // TypeScript Interface for Task State
 interface TaskState {
   tasks: Task[];
-  filter: 'all' | 'active' | 'completed';
+  filter: "all" | "active" | "completed";
 }
 
 // Initial state
 const initialState: TaskState = {
   tasks: [],
-  filter: 'all',
+  filter: "all",
 };
 
 // Create the task slice
 const taskSlice = createSlice({
-  name: 'tasks', 
+  name: "tasks",
   initialState,
   reducers: {
     // Add a new task
     addTask: (state, action: PayloadAction<string>) => {
       const newTask: Task = {
-        id: Date.now().toString(),
+        id: `${Date.now()}-${Math.random()}`, // Add randomness
         title: action.payload,
         completed: false,
         createdAt: new Date().toISOString(),
@@ -38,7 +38,7 @@ const taskSlice = createSlice({
 
     // Toggle task completion status
     toggleTask: (state, action: PayloadAction<string>) => {
-      const task = state.tasks.find(t => t.id === action.payload);
+      const task = state.tasks.find((t) => t.id === action.payload);
       if (task) {
         task.completed = !task.completed;
       }
@@ -46,23 +46,27 @@ const taskSlice = createSlice({
 
     // Delete a task
     deleteTask: (state, action: PayloadAction<string>) => {
-      state.tasks = state.tasks.filter(t => t.id !== action.payload);
+      state.tasks = state.tasks.filter((t) => t.id !== action.payload);
     },
 
     // Set filter
-    setFilter: (state, action: PayloadAction<'all' | 'active' | 'completed'>) => {
+    setFilter: (
+      state,
+      action: PayloadAction<"all" | "active" | "completed">,
+    ) => {
       state.filter = action.payload;
     },
 
     // Clear all completed tasks
     clearCompleted: (state) => {
-      state.tasks = state.tasks.filter(t => !t.completed);
+      state.tasks = state.tasks.filter((t) => !t.completed);
     },
   },
 });
 
 // Export actions
-export const { addTask, toggleTask, deleteTask, setFilter, clearCompleted } = taskSlice.actions;
+export const { addTask, toggleTask, deleteTask, setFilter, clearCompleted } =
+  taskSlice.actions;
 
 // Export reducer
 export default taskSlice.reducer;
