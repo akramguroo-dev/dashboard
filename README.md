@@ -2,8 +2,8 @@
 
 A modern, production-ready task management dashboard built with **React**, **Redux Toolkit**, and **TypeScript**. Demonstrates professional state management, component architecture, and comprehensive testing.
 
-🌐 **Live Demo:** [dashboard-xxx.vercel.app](https://dashboard-xxx.vercel.app)  
-📁 **GitHub:** [github.com/akramguroo-dev/chat-app/tree/main/dashboard](https://github.com/akramguroo-dev/chat-app)  
+🌐 **Live Demo:** [dashboard-gold-theta-32.vercel.app](https://dashboard-gold-theta-32.vercel.app)  
+📁 **GitHub:** [github.com/akramguroo-dev/dashboard](https://github.com/akramguroo-dev/dashboard)  
 🔗 **Portfolio:** [portfolio-puce-six-nm8nojm82f.vercel.app](https://portfolio-puce-six-nm8nojm82f.vercel.app)
 
 ---
@@ -14,7 +14,7 @@ This project demonstrates **professional-grade state management** using Redux To
 
 - **Redux Toolkit** - Modern Redux with less boilerplate
 - **TypeScript** - Type-safe React components and Redux
-- **Jest & React Testing Library** - Comprehensive test suite (26 tests)
+- **Jest & React Testing Library** - Comprehensive test suite (25 tests)
 - **Component Architecture** - Reusable, well-structured components
 - **Best Practices** - Professional patterns and standards
 
@@ -36,7 +36,7 @@ This project demonstrates **professional-grade state management** using Redux To
 - **Redux Toolkit** - Simplified Redux with Immer immutability
 - **TypeScript** - Full type safety for state, actions, and components
 - **Jest Testing** - 16 unit tests for Redux logic
-- **React Testing Library** - 10 integration tests for components
+- **React Testing Library** - 9 integration tests for components
 - **Professional Styling** - CSS with gradients, transitions, and animations
 - **Accessibility** - Semantic HTML, keyboard support, ARIA labels
 
